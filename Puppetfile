@@ -8,4 +8,4 @@ mod 'vcsrepo',
 mod 'stahnma/epel' 
 mod 'puppetlabs/registry'
 mod 'arioch/redis'
-mod 'Ramorous-avamar'
+mod 'Ramorous-avamar', '0.1.1'
