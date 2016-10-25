@@ -32,7 +32,7 @@ node default {
   notify { "Hello Australia and Puppeteers!": }
 }
 
-node /*\.puppetlabs/ {
+node /.puppetlabs/ {
   
   include examples::puppetize
   notify { "Hello from the regex node definition": }
