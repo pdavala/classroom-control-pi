@@ -27,7 +27,7 @@ node default {
   #   class { 'my_class': }
   
   # example code for the classroom
-  # include examples::puppetize
+  include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  notify { "This is a Ray message from irplagura environment": }
 }
