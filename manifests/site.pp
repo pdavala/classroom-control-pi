@@ -21,7 +21,7 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node default {
+node mdeguia.puppetlabs.vm {
   include examples::puppetize
   notify { "This will only be enforced on the Linux container.": }
 }
