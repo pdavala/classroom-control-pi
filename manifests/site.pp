@@ -32,7 +32,7 @@ node default {
   notify { "Hello!! Welcome to Guru's world!!": }
 }
 
-node 'guruprasad-win.puppetlabs.vm' {
+node guruprasad-win.puppetlabs.vm {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
