@@ -29,7 +29,7 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello!! Welcome to Guru's world!!": }
+  #notify { "Hello!! Welcome to Guru's world!!": }
 }
 
 node 'guruprasad-win.puppetlabs.vm' {
@@ -40,5 +40,5 @@ node 'guruprasad-win.puppetlabs.vm' {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello!! Welcome to Guru's Windows world!!": }
+  #notify { "Hello!! Welcome to Guru's Windows world!!": }
 }
