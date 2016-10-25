@@ -22,8 +22,13 @@
 # specified in the console for that node.
 
 node nflores101.puppetlabs.vm {
-   notify { "This will only be enforced on the Linux container.": }
+   notify { "This will only be enforced on the Redhat container.": }
 }
+
+node neil-win.puppetlabs.vm {
+   notify { "This will only be enforced on the Windows container.": }
+}
+
 
 node default {
   # This is where you can declare classes for all nodes.
