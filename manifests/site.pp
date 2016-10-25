@@ -40,5 +40,16 @@ node ajay291491.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Welcome to ajay291491 code repository, updated with node definition": }
+  notify { "Welcome to ajay291491 code repository, updated with node definition for Linux": }
+}
+
+node ajayaghosh-win.puppetlabs.vm {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
+  
+  # example code for the classroom
+  include examples::puppetize
+  
+  notify { "Welcome to ajay291491 code repository, updated with node definition for Windows": }
 }
