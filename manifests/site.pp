@@ -25,9 +25,9 @@ node nflores101.puppetlabs.vm {
    notify { "This will only be enforced on the Redhat container.": }
 }
 
-node neil-win.puppetlabs.vm {
-   notify { "This will only be enforced on the Windows container.": }
-}
+#node neil-win.puppetlabs.vm {
+#   notify { "This will only be enforced on the Windows container.": }
+#}
 
 
 node default {
