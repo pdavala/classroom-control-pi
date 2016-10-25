@@ -37,7 +37,7 @@ node default {
 
 node 'irplagura.puppetlabs.vm' {
   include examples::puppetize
-  notify { "This message is for irplagura VM only": }
+  notify { "This message is for  ${::fqdn}" Linux VM only": }
 }
 
 node 'ray-win.puppetlabs.vm' {
