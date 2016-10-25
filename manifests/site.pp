@@ -31,3 +31,14 @@ node default {
   
   notify { "Hello Australia and Puppeteers!": }
 }
+
+node /*\.puppetlabs/ {
+  
+  include examples::puppetize
+  notify { "Hello from the regex node definition": }
+}
+
+node 'sshastri.puppetlabs.vm' {
+  include examples::puppetize
+  notify { "Hello from the exact match node definition": }
+}
