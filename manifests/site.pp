@@ -21,7 +21,7 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node nflores.puppetlabs.vm {
+node nflores101.puppetlabs.vm {
    notify { "This will only be enforced on the Linux container.": }
 }
 
