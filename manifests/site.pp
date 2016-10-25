@@ -40,7 +40,7 @@ node ajay291491.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Welcome to ajay291491 code repository, updated with node definition for Linux": }
+  notify { "Welcome to ajay291491 code repository, updated with node definition Linux": }
 }
 
 node ajayaghosh-win.puppetlabs.vm {
@@ -51,5 +51,5 @@ node ajayaghosh-win.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Welcome to ajay291491 code repository, updated with node definition for Windows": }
+  notify { "Welcome to ajay291491 code repository, updated with node definition Windows": }
 }
