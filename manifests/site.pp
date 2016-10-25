@@ -29,5 +29,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello world! I am ${::fqdn}": }
+  notify { "Hello!! Welcome to guru's World... I am ${::fqdn}": }
 }
