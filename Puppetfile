@@ -5,6 +5,6 @@ mod 'acme/ohmyzsh', '0.1.2'
 mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
-# Installs the puppetlabs/ntp module from its GitHub repository
-mod 'puppetlabs-ntp', '4.2.0'
-  :git => 'https://github.com/puppetlabs/puppetlabs-ntp'
+mod 'stahnma/epel'
+mod 'puppetlabs/registry'
+mod 'arioch/redis'
