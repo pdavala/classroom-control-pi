@@ -9,4 +9,5 @@ class profile::redis {
     
   }
   
+  contain redis
 }
