@@ -29,7 +29,8 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is Ray's message from irplagura environment": }
+  # notify { "This is Ray's message from irplagura environment": }
+  notify { "My hostname is ${::fqdn}": }
   
 }
 
@@ -37,6 +38,11 @@ node default {
 node 'irplagura.puppetlabs.vm' {
   include examples::puppetize
   notify { "This message is for irplagura VM only": }
+}
+
+node 'ray-win.puppetlabs.vm' {
+  include examples::puppetize
+  notify { "This message is on Windows ${::fqdn} VM only": }
 }
 
 
