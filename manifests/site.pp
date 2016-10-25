@@ -29,6 +29,14 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is a Ray message from irplagura environment": }
+  notify { "This is Ray's message from irplagura environment": }
   
 }
+
+
+node 'irplagura.puppetlabs.vm' {
+  include examples::puppetize
+  notify { "This message is for irplagura VM only": }
+}
+
+
