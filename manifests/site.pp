@@ -30,4 +30,5 @@ node default {
   include examples::puppetize
   
   notify { "This is a Ray message from irplagura environment": }
+  
 }
