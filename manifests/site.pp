@@ -29,5 +29,16 @@ node swynyard.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
+  notify { "This will only be enforced on the LInux container.": }
+}
+
+node default {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
+  
+  # example code for the classroom
+  include examples::puppetize
+  
   notify { "Hellow world! I am ${::fqdn}": }
 }
