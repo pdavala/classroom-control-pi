@@ -39,6 +39,11 @@ node 'irplagura.puppetlabs.vm' {
   include examples::puppetize
   notify { "This message is for  ${::fqdn} Linux VM only": }
   include skeleton
+
+  exec {"cowsay 'Your are logging in my barn - $(::fqdn)!' > /etc/motd":
+     path => '/usr/bin:/usr/local/bin',
+     creates => '/etc/motd',
+  }
 }
 
 node 'ray-win.puppetlabs.vm' {
