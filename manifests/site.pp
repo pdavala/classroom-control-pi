@@ -26,9 +26,8 @@ node nflores101.puppetlabs.vm {
  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
    path => '/usr/bin:/usr/local/bin',
    creates => '/etc/motd',
+ }
 }
- 
-#}
 
 #node neil-win.puppetlabs.vm {
 #   notify { "This will only be enforced on the Windows container.": }
