@@ -22,7 +22,7 @@
 # specified in the console for that node.
 
 node jsmall3.puppetlabs.vm {
-  notify { 'This will only be enforced on the Linux container.': }
+#  notify { 'This will only be enforced on the Linux container.': }
 }
 
 node default {
