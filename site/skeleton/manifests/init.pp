@@ -1,7 +1,7 @@
 class skeleton {
   file { '/etc/skel':
 #    ensure => ???,   # what value should go here?
-    ensure => 'dir',
+    ensure => directory,
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
@@ -9,7 +9,7 @@ class skeleton {
   
   # add a resource to manage /etc/skel/.bashrc
    file { '/etc/skel/.bashrc':
-    ensure => 'file',
+    ensure => file,
     owner => 'root',
     group => 'root',
     mode => '0755',
