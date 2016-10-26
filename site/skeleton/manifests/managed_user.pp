@@ -1,23 +1,21 @@
 define skeleton::managed_user (
-$password = undef,
-  $home = undef,
-  # TODO: Add a password parameter
-  
+  $home     = undef,
+  $password = undef,
 ) {
   if $home {
     $homedir = $home
   }
   else {
     $homedir = $osfamily ? {
-      'windows' => "C:/Users/${name}",
-      'RedHat'  => "/home/${name}",
+      'windows' => "C:/Users/${title}",
+      'RedHat'  => "/home/${title}",
     }
   }
 
   if $osfamily == 'windows' {
     # set resource defaults so the file properties are set appropriately
     File {
-      owner => $name,
+      owner => $title,
       group => 'Administrators',
       mode  => '0664',
     }
@@ -38,26 +36,25 @@ $password = undef,
   }
   else {
     File {
-      owner => $name,
+      owner => $title,
       group => 'wheel',
       mode  => '0644',
     }
-#Adding home dir and bashrc profile for user
-  file { "{homedir}/.bashrc":
-    ensure => file,
-    source => 'puppet:///modules/skeleton/bashrc',
+
+    # TODO: Add a file resource to manage "${homedir}/.bashrc"
+    file { "${homedir}/.bashrc" :
+      ensure => file,
+      source => 'puppet:///modules/skeleton/bashrc',
     }
-    }
+  }
 
   # Puppet will evaluate these resources in the proper order because it's smart
   # and knows about dependencies between files and their owners
 
-  user { $name:
+  user { $title:
     ensure     => present,
-    password => $password,
     managehome => true,
-    # TODO: Pass the password parameter to this resource
-    
+    password   => $password,
   }
 
   file { $homedir:
