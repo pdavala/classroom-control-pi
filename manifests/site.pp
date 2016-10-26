@@ -27,20 +27,10 @@ node default {
   #   class { 'my_class': }
   
   # example code for the classroom
-  include examples::puppetize
+  # include examples::puppetize
   
-  notify { "Welcome to ajay291491 code repository": }
+  # notify { "Welcome to ajay291491 code repository": }
+  unless $environment in [ 'production', 'staging' ] {
+    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
 }
-
-
-node ajay291491.puppetlabs.vm {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
-  
-  # example code for the classroom
-  include examples::puppetize
-  
-  notify { "Welcome to ajay291491 code repository Linux specific": }
-}
-
