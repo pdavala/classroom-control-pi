@@ -36,8 +36,4 @@ node 'sshastri.puppetlabs.vm' {
   include examples::puppetize
   notify { "Hello from the exact match node definition": }
   
-  exec { "cowsay Humpday aint no slump day > /etc/motd" :
-    path => '/usr/local/bin:/usr/bin',
-    creates => '/etc/motd',
-  }
 }
