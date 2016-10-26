@@ -12,7 +12,7 @@ class skeleton {
     owner => 'root',
     group => 'root',
     mode => '0644',
-    content => 'puppet:///modules/skeleton/dotbashrc',
+    source => 'puppet:///modules/skeleton/dotbashrc',
   }
 
 
