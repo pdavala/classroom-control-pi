@@ -1,3 +1,5 @@
+class profile::redis ($master = false) {
+
 class profile::redis {
   # We'll require our epel class so that it is enforced first.
   # Don't forget to update that class before enforcing your code
@@ -17,4 +19,5 @@ class profile::redis {
     slaveof => $slaveof,
   }
   contain redis
+}
 }
