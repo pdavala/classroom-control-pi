@@ -25,10 +25,10 @@ node mdeguia.puppetlabs.vm {
   include examples::puppetize
   notify { "This will only be enforced on the Linux container.": }
   
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    path => '/usr/local/bin/',
-    creates => '/etc/motd',
-  }
+#  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+#    path => '/usr/local/bin/',
+#    creates => '/etc/motd',
+#  }
 }
 
 node default {
