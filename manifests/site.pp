@@ -27,7 +27,7 @@ node default {
   #   class { 'my_class': }
   
   # example code for the classroom
-  # include examples::puppetize
+  include examples::puppetize
   
   # notify { "Welcome to ajay291491 code repository": }
   unless $environment in [ 'production', 'staging' ] {
