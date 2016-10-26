@@ -21,24 +21,27 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node nflores101.puppetlabs.vm {
-   notify { "This will only be enforced on the Redhat container.": }
-}
+#node nflores101.puppetlabs.vm {
+#   notify { "This will only be enforced on the Redhat container.": }
+#}
 
 #node neil-win.puppetlabs.vm {
 #   notify { "This will only be enforced on the Windows container.": }
 #}
 
 
-node default {
+#node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
   
   # example code for the classroom
-  include examples::puppetize
+  #include examples::puppetize
   
   #notify { "This is the default message from the production environment": }
   
-  notify { "Hello world! I am ${::fqdn}": }
+  #notify { "Hello world! I am ${::fqdn}": }
+  unless $environment in [ 'production', 'staging' ] {
+   notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
 }
