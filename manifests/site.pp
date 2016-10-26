@@ -31,12 +31,12 @@ node default {
   #notify { "Warning: this is a development environment on ${::fqdn}": }
 }
 
-node 'guruach.puppetlabs.vm' {
+#node 'guruach.puppetlabs.vm' {
 #notify { "This will only be enforced on the Linux container.": }
-exec { "cowsay 'Welcome dear Puppeteers ${::fqdn}!' > /etc/motd":
-path => '/usr/bin:/usr/local/bin',
-creates => '/etc/motd',
-}
+#exec { "cowsay 'Welcome dear Puppeteers ${::fqdn}!' > /etc/motd":
+#path => '/usr/bin:/usr/local/bin',
+#creates => '/etc/motd',
+#}
 }
 
 node 'guruprasad-win.puppetlabs.vm' {
