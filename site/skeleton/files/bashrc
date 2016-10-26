@@ -9,4 +9,5 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-PATH='/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin'
+export PATH=$PATH:/usr/local/bin
+cowsay "Welcome to my machine"
