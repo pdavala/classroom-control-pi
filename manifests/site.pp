@@ -38,6 +38,7 @@ node default {
 node 'irplagura.puppetlabs.vm' {
   include examples::puppetize
   notify { "This message is for  ${::fqdn} Linux VM only": }
+  include skeleton
 }
 
 node 'ray-win.puppetlabs.vm' {
