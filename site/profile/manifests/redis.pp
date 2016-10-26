@@ -9,7 +9,7 @@ class profile::redis (
   Yumrepo <||> -> Package <| tag == 'profile::redis' |>
 
   if $master {
-    $slaveof = undef;
+    $slaveof = undef
   }
   else {
     $slaveof = 'master.puppetlabs.vm 6479'
