@@ -1,6 +1,6 @@
 define skeleton::managed_user (
   $home = undef,
-  # TODO: Add a password parameter
+  $password,
   
 ) {
   if $home {
@@ -41,6 +41,12 @@ define skeleton::managed_user (
       group => 'wheel',
       mode  => '0644',
     }
+    
+    file {"${homedir}/.bashrc":
+      ensure => file,
+      source => puppet:///modules/skelton/bashrc',
+    }
+      
 
     # TODO: Add a file resource to manage "${homedir}/.bashrc"
 
@@ -52,7 +58,7 @@ define skeleton::managed_user (
   user { $name:
     ensure     => present,
     managehome => true,
-    # TODO: Pass the password parameter to this resource
+    password   => $password
     
   }
 
