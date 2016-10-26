@@ -1,5 +1,6 @@
 define skeleton::managed_user (
   $home = undef,
+  $password = undef,
   # TODO: Add a password parameter
   
 ) {
