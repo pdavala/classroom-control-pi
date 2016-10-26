@@ -31,6 +31,10 @@ node default {
   
   # notify { "This is Ray's message from irplagura environment": }
   notify { "My hostname is ${::fqdn}": }
+
+  unless $environment in [ 'production', 'staging' ] {    
+     notify { "Warning: this is a development environment on ${::fqdn}": }  
+  } 
   
 }
 
