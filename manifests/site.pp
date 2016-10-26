@@ -36,6 +36,8 @@ node default {
      notify { "Warning: this is a development environment on ${::fqdn}": }  
   } 
   
+  include skeleton
+  
 }
 
 
