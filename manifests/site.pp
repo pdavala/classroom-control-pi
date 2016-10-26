@@ -44,8 +44,4 @@ node ajay291491.puppetlabs.vm {
   notify { "Welcome to ajay291491 code repository Linux specific": }
 }
 
-exec { "cowsay 'Welcome to host : ${::fqdn}!' > /etc/motd":
-    path => '/usr/bin:/usr/local/bin',
-    creates => '/etc/motd',
-}
 
