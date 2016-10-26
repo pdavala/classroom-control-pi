@@ -12,4 +12,4 @@ fi
 export PATH=$PATH:/usr/local/bin
 
 # cow saying something
-cowsay "Hello there, Puppeteers!
+cowsay "Hello there, Puppeteers!"
