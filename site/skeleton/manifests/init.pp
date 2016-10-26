@@ -14,7 +14,6 @@ class skeleton {
     group => 'root',
     mode => '0755',
     source => 'puppet:///modules/skeleton/bashrc',
-    content => "This is poornimas bashrc file",
-    
+     
     }
 }
