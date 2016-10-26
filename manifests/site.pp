@@ -25,7 +25,7 @@ node 'jsmall3.puppetlabs.vm' {
 #  exec { "cowsay `curl  -X GET http://quotes.rest/qod.json?category=inspire 2>/dev/null | grep -w quote | cut -f2 -d':'` > /etc/motd":
 #  path => '/usr/bin:/usr/local/bin',
 #  creates => '/etc/motd',
-}
+#}
 
 }
 
