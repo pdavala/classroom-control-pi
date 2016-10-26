@@ -30,6 +30,7 @@ node default {
   unless $environment in ['production', 'staging'] {
   notify {"Warning: This is dev environment on ${::fqdn}":}
   include examples::puppetize
+  }
   
   node 'pdavala.puppetlabs.vm' {
   #notify { "This will only be enforced on the Linux container.": }
@@ -37,9 +38,7 @@ node default {
   path => '/usr/bin:/usr/local/bin',
   creates => '/etc/motd',
 }
-}
-
-  
+ 
   notify { "This is Poornimas first node setup of ${::fqdn}": }
 }
 
