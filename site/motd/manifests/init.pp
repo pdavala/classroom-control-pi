@@ -1,5 +1,5 @@
 class motd {
-  exec { "figlet '404 puppet not found' > /etc/motd":
+  exec { "figlet 'is this what they mean by big data?' > /etc/motd":
     path    => '/bin:/usr/bin:/usr/local/bin',
     creates => '/etc/motd',
     require => Package['figlet'],
