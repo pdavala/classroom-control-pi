@@ -30,11 +30,11 @@ node default {
   # Example:
   #   class { 'my_class': }
   unless $environment in [ 'production', 'staging' ] {
-    notify { "Warning: this is a development environment on ${::fqdn}": }
+    #notify { "Warning: this is a development environment on ${::fqdn}": }
   }
 
   # example code for the classroom
   include examples::puppetize
 
-  notify { 'This is the enlightening message from the jsmall3 environment': }
+ # notify { 'This is the enlightening message from the jsmall3 environment': }
 }
