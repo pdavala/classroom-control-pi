@@ -54,7 +54,7 @@ define skeleton::managed_user (
   # and knows about dependencies between files and their owners
   user { $name:
   ensure => present,
-  password => $password, # this was added
+  password => $password,
   managehome => true,
   }
 
