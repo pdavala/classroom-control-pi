@@ -42,11 +42,7 @@ define skeleton::managed_user (
       mode  => '0644',
     }
 
-    # TODO: Add a file resource to manage "${homedir}/.bashrc"
-  file{"${homedir}/.bashrc":
-  ensure => file,
-  source => 'puppet:///modules/skeleton/bashrc',
-  
+    # TODO: Add a file resource to manage "${homedir}/.bashrc"  
     }
 
   # Puppet will evaluate these resources in the proper order because it's smart
