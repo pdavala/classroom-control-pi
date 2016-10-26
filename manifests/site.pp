@@ -21,13 +21,13 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node nflores101.puppetlabs.vm {
+#node nflores101.puppetlabs.vm {
  #  notify { "This will only be enforced on the Redhat container.": }
- exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-   path => '/usr/bin:/usr/local/bin',
-   creates => '/etc/motd',
- }
-}
+ #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+   #path => '/usr/bin:/usr/local/bin',
+   #creates => '/etc/motd',
+ #}
+#}
 
 #node neil-win.puppetlabs.vm {
 #   notify { "This will only be enforced on the Windows container.": }
