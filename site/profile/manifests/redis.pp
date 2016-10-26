@@ -5,11 +5,11 @@ class profile::redis {
 
   # process all yum repos prior to any pkgs in this class
   Yumrepo <||> -> Package <| tag == 'profile::redis' |>
-  
+
   class { 'redis':
     # what parameter should we pass to set maxmemory to 10mb?
     maxmemory => '10mb',
-    
+
   }
-  
+
 }

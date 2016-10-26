@@ -21,7 +21,7 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node jsmall3.puppetlabs.vm {
+node 'jsmall3.puppetlabs.vm' {
 #  notify { 'This will only be enforced on the Linux container.': }
 }
 
@@ -33,9 +33,8 @@ node default {
     notify { "Warning: this is a development environment on ${::fqdn}": }
   }
 
-  
   # example code for the classroom
   include examples::puppetize
-  
-  notify { "This is the enlightening message from the jsmall3 environment": }
+
+  notify { 'This is the enlightening message from the jsmall3 environment': }
 }
