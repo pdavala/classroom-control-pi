@@ -1,3 +1,4 @@
 ---
 message: Nothing. Silence in the classroom 
-
+userprefs::editor: 'vim'
+userprefs::shell: 'zsh'
