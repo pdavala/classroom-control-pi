@@ -28,12 +28,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
-  notify { "Hello Australia and Puppeteers!": }
+  $message = hiera('message')  
+  notify { "Hello Australia and Puppeteers! ${message} ": }
 }
 
-node 'sshastri.puppetlabs.vm' {
-  include examples::puppetize
-  notify { "Hello from the exact match node definition": }
-  
-}
