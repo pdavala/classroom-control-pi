@@ -40,5 +40,5 @@ node default {
   include examples::puppetize
   
   # notify { "This is the default message from the production environment": }
-   notify { "Hello world! I am ${::fqdn}": }
+   notify { "Primary disk size is ${::disks['sda']['size']} in size.": }
 }
