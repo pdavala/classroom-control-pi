@@ -21,13 +21,13 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node 'jsmall3.puppetlabs.vm' {
+#node 'jsmall3.puppetlabs.vm' {
 #  exec { "cowsay `curl  -X GET http://quotes.rest/qod.json?category=inspire 2>/dev/null | grep -w quote | cut -f2 -d':'` > /etc/motd":
 #  path => '/usr/bin:/usr/local/bin',
 #  creates => '/etc/motd',
 #}
 
-}
+#}
 
 node default {
   # This is where you can declare classes for all nodes.
