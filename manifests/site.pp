@@ -44,6 +44,9 @@ node ajay291491.puppetlabs.vm {
   
   notify { "Welcome to ajay291491 code repository Linux specific": }
   notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+  
+  $message = hiera('message')
+  notify { $message: }
 }
 
 
