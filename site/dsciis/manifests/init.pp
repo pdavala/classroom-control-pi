@@ -13,7 +13,7 @@ class dsciis {
 #  }
 
 dsc_windowsfeature { 'iis':
-  dsc_ensure => 'present',
+  dsc_ensure => 'Present',
   dsc_name   => 'Web-Server',
  }
   
@@ -23,7 +23,7 @@ dsc_windowsfeature { 'iis':
 #  }
 
 dsc_windowsfeature {'iisscriptingtools':
-  dsc_ensure => 'present',
+  dsc_ensure => 'Present',
   dsc_name   => 'Web-Scripting-Tools',
  }
  
