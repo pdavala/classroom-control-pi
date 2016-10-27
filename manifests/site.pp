@@ -28,10 +28,10 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
+  $message=hiera('message')
+  notify{$message:}
   notify { "Welcome to pdavala code repository": }
-  notify { "The Primary Disk is ${::disks['sda']['size']} in size.":}
-}
+  }
 
 
 node pdavala.puppetlabs.vm {
@@ -41,6 +41,6 @@ node pdavala.puppetlabs.vm {
   
   # example code for the classroom
   include examples::puppetize
-  
+  notify { "The Primary Disk is ${::disks['sda']['size']} in size.":}
   notify { "Welcome to poornimas code": }
 }
