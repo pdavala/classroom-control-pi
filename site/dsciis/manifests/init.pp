@@ -12,7 +12,7 @@ class dsciis {
 #    Name      = 'Web-Server'
 #  }
 
-dsc_windows_feature { 'IIS':
+dsc_windows_feature { 'iis':
   dsc_ensure => 'present',
   dsc_name   => 'Web-Server',
  }
