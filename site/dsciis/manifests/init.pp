@@ -8,7 +8,7 @@ class dsciis {
 
   # Translate these DSC Powershell resources into Puppet code below
 #  WindowsFeature iis {
-  dsc_windowsfeature{'iis':
+  dsc_windowsfeature {'iis':
 #    Ensure    = 'Present'
     dsc_ensure => 'Present',
 #    Name      = 'Web-Server'
@@ -16,7 +16,7 @@ class dsciis {
     }
 
 #  WindowsFeature iisscriptingtools {
-  dsc_windowsfeature{'iisscriptingtools': 
+  dsc_windowsfeature {'iisscriptingtools': 
 #    Ensure    = 'Present',
     dsc_ensure => 'Present',
 #    Name      = 'Web-Scripting-Tools',
@@ -27,7 +27,7 @@ class dsciis {
   file { 'C:/inetpub/wwwroot/index.html':
     ensure => 'file',
     source => 'puppet:///modules/dsciis/index.html',
-    require => Dsc_windowsfeature['iis'],
+#    require => Dsc_windowsfeature['iis'],
   }
 
 }
