@@ -43,6 +43,7 @@ node ajay291491.puppetlabs.vm {
   include examples::puppetize
   
   notify { "Welcome to ajay291491 code repository Linux specific": }
+  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
 }
 
 
