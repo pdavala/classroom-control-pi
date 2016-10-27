@@ -30,5 +30,6 @@ node default {
   include examples::puppetize
   $message = hiera('message')  
   notify { "Hello Australia and Puppeteers! ${message} ": }
+  include troubleshooting
 }
 
