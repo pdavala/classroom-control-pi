@@ -30,9 +30,10 @@ node default {
   # include examples::puppetize
   # unless $environment in ['production', 'staging']{
   # notify { "Warning: This is a develeopment environment on ${::fqdn}":}
-  exec {"cowsay Welcome to puppet training > /etc/motd":
-  path => '/usr/bin:/usr/local/bin'
-  creates => '/etc/motd',
+  notify {"The Primary Disk is ${::{disks['sda']['size'] in size":}
+  #exec {"cowsay Welcome to puppet training > /etc/motd":
+  #path => '/usr/bin:/usr/local/bin'
+  #creates => '/etc/motd',
   }
   
   # notify { "This is the default message from the production environment Puppet Training": }
