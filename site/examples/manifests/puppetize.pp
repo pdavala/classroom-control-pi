@@ -18,5 +18,5 @@ class examples::puppetize {
       content => epp('examples/example.epp'),
     }
   }
-  
+
 }

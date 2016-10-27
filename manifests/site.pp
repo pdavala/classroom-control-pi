@@ -40,5 +40,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
 
- # notify { 'This is the enlightening message from the jsmall3 environment': }
+  # notify { 'This is the enlightening message from the jsmall3 environment': }
 }

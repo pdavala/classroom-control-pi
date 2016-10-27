@@ -11,18 +11,18 @@ class dsciis {
 #    Ensure    = 'Present'
 #    Name      = 'Web-Server'
 #  }
-  
+
 #  WindowsFeature iisscriptingtools {
 #    Ensure    = 'Present',
 #    Name      = 'Web-Scripting-Tools',
 #  }
-  
+
   # The index file is managed as a native Puppet file resource.
   file { 'C:/inetpub/wwwroot/index.html':
-    ensure  => 'file',
-    source  => 'puppet:///modules/dsciis/index.html',
+    ensure => 'file',
+    source => 'puppet:///modules/dsciis/index.html',
     # TODO: what relationship should go here?
-    
+
   }
 
 }
