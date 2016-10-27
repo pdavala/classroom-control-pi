@@ -30,6 +30,7 @@ node default {
   include examples::puppetize
   
   notify { "Welcome to ajay291491 code repository": }
+  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
 }
 
 
