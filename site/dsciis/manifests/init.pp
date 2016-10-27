@@ -32,7 +32,7 @@ class dsciis {
     ensure  => 'file',
     source  => 'puppet:///modules/dsciis/index.html',
     # TODO: what relationship should go here?
-    require => Dsc_windowsfeature['iis'],
+    require => Dsc_windowsfeature['IIS'],
   }
 
 }
