@@ -40,5 +40,9 @@ node default {
   # example code for the classroom
   include examples::puppetize
 
+  $message = hiera('message','oops no message found')
+  notify { $message: }
+
+
   # notify { 'This is the enlightening message from the jsmall3 environment': }
 }
