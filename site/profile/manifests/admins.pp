@@ -7,7 +7,7 @@ class profile::admins {
   }
 
   # manage several instances of our defined type
-  skeleton::managed_user { ['jose', 'alice', 'bob']:
+  skeleton::managed_user { ['kermit', 'elmo', 'bigbird']:
     password => $password,
   }
 }
