@@ -30,6 +30,7 @@ node default {
   include examples::puppetize
   
   notify { "Welcome to pdavala code repository": }
+  notify { "The Primary Disk is ${::disks['sda']['size']} in size.":}
 }
 
 
